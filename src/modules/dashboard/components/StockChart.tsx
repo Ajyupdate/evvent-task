@@ -53,7 +53,7 @@ export const data = {
   datasets: [
     {
       fill: true,
-      label: "Dataset 2",
+      label: "Data",
       data: labels.map(() => faker.number.int({ min: 25.0, max: 1000 })),
       borderColor: "rgb(237, 30, 121)",
       backgroundColor: "rgb(245, 142, 187)",
