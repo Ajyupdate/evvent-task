@@ -113,7 +113,7 @@ const PerformanceData = [
 ];
 function TableStatSection() {
   return (
-    <Grid templateColumns={{ base: "100%", md: "60% 40%" }} gap={4} mt={8}>
+    <Grid mt-2 templateColumns={{ base: "100%", md: "60% 40%" }} gap={4} mt={8}>
       <GridItem colSpan={1}>
         <TransactionListTable dataArray={TransactionListData} />
       </GridItem>

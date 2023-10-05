@@ -64,7 +64,7 @@ export default function TopPerfomanceTable({ dataArray }: iTopPerfomanceTable) {
         templateColumns="repeat(3, 1fr)"
         gap={2}
         fontWeight={"medium"}
-        bg={"gray.100"}
+        bg={"rgb(239, 239, 239)"}
       >
         <GridItem w="100%">Service</GridItem>
         <GridItem w="100%">
@@ -106,9 +106,9 @@ export default function TopPerfomanceTable({ dataArray }: iTopPerfomanceTable) {
                     <GridItem colSpan={1} py={2}>
                       <Text fontWeight="bold">Status:</Text>
                       <button
-                        className={`font-medium rounded-md ${
+                        className={`font-bold rounded-md ${
                           item.status === "Active"
-                            ? "bg-teal-200 text-teal-500"
+                            ? "bg-custom-teal text-teal-700"
                             : "bg-orange-100 text-orange-300"
                         }  px-2 `}
                         type="button"

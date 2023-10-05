@@ -17,9 +17,16 @@ const config: Config = {
 
       backgroundColor: {
         "custom-pink-500": "rgba(237, 30, 121, 1)",
+        "custom-teal": "rgb(193,239,224)",
+        "custom-red": "rgb(247, 194, 190)",
+        "custom-grey": "rgb(239, 239, 239)",
       },
       textColor: {
         "custom-pink-500": "rgba(237, 30, 121, 1)",
+        "button-red": "rgb(224,21,7)",
+      },
+      borderRadius: {
+        custom: "1.5rem", // Adjust the value as needed
       },
     },
   },

@@ -1,4 +1,5 @@
-import PageLayout from "@/modules/dashboard/layout/DashboardLayout";
+import Footer from "@/components/Footer";
+import { Box } from "@chakra-ui/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -18,7 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <PageLayout>{children}</PageLayout>
+          {children}
+          <Box mt={32}>
+            <Footer />
+          </Box>
         </Providers>
         <script
           src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"

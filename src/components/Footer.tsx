@@ -47,7 +47,11 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 
 export default function Footer() {
   return (
-    <Box color={useColorModeValue("gray.700", "gray.200")}>
+    <Box
+      //   position={"fixed"}
+      //   bottom={0}
+      color={useColorModeValue("gray.700", "gray.200")}
+    >
       <Container
         as={Stack}
         maxW={"6xl"}

@@ -36,7 +36,7 @@ export default function StatisticsCardComponents({
             <GridItem key={item.title}>
               <Card
                 p={"4"}
-                boxShadow={"none"}
+                boxShadow={"sm"}
                 variant={"outline"}
                 color={"black"}
               >
@@ -82,8 +82,8 @@ export default function StatisticsCardComponents({
                     <button
                       className={`rounded-md px-1   ${
                         parseInt(item.statPercent) < 0
-                          ? "bg-red-200 text-red-500"
-                          : "bg-teal-200 text-teal-700"
+                          ? "bg-custom-red text-button-red"
+                          : "bg-custom-teal text-teal-700"
                       }  `}
                       type="button"
                     >

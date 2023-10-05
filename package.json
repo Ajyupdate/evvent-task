@@ -14,15 +14,18 @@
     "@chakra-ui/react": "^2.8.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "apexcharts": "^3.43.0",
     "chart.js": "^4.4.0",
     "framer-motion": "^10.16.4",
     "next": "latest",
     "react": "latest",
+    "react-apexcharts": "^1.4.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "latest",
     "react-icons": "^4.11.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.1.0",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",

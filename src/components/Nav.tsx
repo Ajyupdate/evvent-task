@@ -36,7 +36,8 @@ const NavLink = (props: Props) => {
       rounded={"md"}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
+        bg: useColorModeValue("pink.200", "gray.700"),
+        color: "white",
       }}
       href={"#"}
     >
@@ -45,7 +46,7 @@ const NavLink = (props: Props) => {
   );
 };
 
-export default function Nav() {
+export default function Nav({ title }: { title: string }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -110,7 +111,7 @@ export default function Nav() {
           </HStack>
         </Flex>
         <Box mt={8}>
-          <Heading>Title</Heading>
+          <Heading>{title}</Heading>
         </Box>
 
         {isOpen ? (

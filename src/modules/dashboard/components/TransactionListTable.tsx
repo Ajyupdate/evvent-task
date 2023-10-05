@@ -55,7 +55,7 @@ export default function TransactionListTable({
       maxH={{ md: "500px" }}
       p={4}
       border="1px"
-      borderColor="gray.200"
+      borderColor="rgb(231,231,231)"
       rounded={"md"}
       shadow={"sm"}
     >
@@ -74,7 +74,7 @@ export default function TransactionListTable({
         templateColumns="repeat(4, 1fr)"
         gap={2}
         fontWeight={"medium"}
-        bg={"gray.100"}
+        bg={"rgb(239, 239, 239)"}
       >
         <GridItem w="100%">Transaction</GridItem>
         <GridItem w="100%">

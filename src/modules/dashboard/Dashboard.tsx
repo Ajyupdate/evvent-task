@@ -2,6 +2,7 @@
 import { Card, Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import StatisticsCardComponents from "./components/StatisticsCardsSection";
+import AreaChart from "./components/StockChart";
 import TableStatSection from "./components/TableStatSection";
 const statDetails = [
   {
@@ -62,12 +63,13 @@ function Dashboard() {
         <div>
           <StatisticsCardComponents statDetails={statDetails} />
           <TableStatSection />
-          {/* <StockChart /> */}
+          <AreaChart />
         </div>
       )}
+
       {activeTab === "tab2" && (
         <div>
-          <p>Content for Tab 2 goes here.</p>
+          <p>Content for Transaction List.</p>
         </div>
       )}
     </div>
