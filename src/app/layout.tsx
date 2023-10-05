@@ -20,7 +20,10 @@ export default function RootLayout({
         <Providers>
           <PageLayout>{children}</PageLayout>
         </Providers>
-        {/* <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script> */}
+        <script
+          src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"
+          async
+        ></script>
       </body>
     </html>
   );
