@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* For Webkit browsers like Chrome and Safari */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent; /* Make the scrollbar thumb (the draggable part) transparent */
+}
+
+/* For Firefox */
+/* You may need to adjust this to match your specific version of Firefox */
+/* This is based on Firefox version 64+ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* For Internet Explorer */
+/* You may need to adjust this to match your specific version of IE */
+/* This is based on IE 11 */
+* {
+  -ms-overflow-style: none;
+}
