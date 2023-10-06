@@ -64,20 +64,6 @@ export default function StatisticsCardComponents({
                         {item.title !== "Total Income" ? " services" : " NOK"}
                       </Box>
                     </Box>
-                    <Box>
-                      <Box as="span">Last Month </Box>
-                      {"  "}
-                      <Box
-                        ml={1}
-                        as="span"
-                        fontWeight={"bold"}
-                        color={item.title === "Total Income" ? "green.600" : ""}
-                      >
-                        {item.LastMonthValue}
-                        {"   "}
-                        {item.title === "Total Income" ? "NOK" : ""}
-                      </Box>
-                    </Box>
                   </Box>
                   <Box mt={2}>
                     <button
@@ -104,6 +90,20 @@ export default function StatisticsCardComponents({
                     </button>
                   </Box>
                 </Flex>
+                <Box>
+                  <Box as="span">Last Month </Box>
+                  {"  "}
+                  <Box
+                    ml={1}
+                    as="span"
+                    fontWeight={"bold"}
+                    color={item.title === "Total Income" ? "green.600" : ""}
+                  >
+                    {item.LastMonthValue}
+                    {"   "}
+                    {item.title === "Total Income" ? "NOK" : ""}
+                  </Box>
+                </Box>
               </Card>
             </GridItem>
           );
