@@ -265,9 +265,11 @@ export default function PageLayout({
             </div>
           </div>
         </aside>
-        <div className="p-6 sm:ml-64 md:mr-24">
-          <Nav title={title} />
-          {children}
+        <div className="p-6 sm:ml-64 ">
+          <Box mr={{ md: "10%" }}>
+            <Nav title={title} />
+            {children}
+          </Box>
         </div>{" "}
       </div>
     </Box>

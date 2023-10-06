@@ -54,7 +54,7 @@ export default function Nav({ title }: { title: string }) {
       <Box>
         <Flex
           h={16}
-          px={4}
+          // px={4}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
@@ -78,11 +78,14 @@ export default function Nav({ title }: { title: string }) {
             </HStack>
           </HStack>
           <HStack spacing={6} alignItems={"center"}>
-            <button className="border border-grey-500 hidden md:block hover:text-white hover:bg-pink-400 text-black text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center h-8">
+            <button className="border flex w-full border-grey-500 hidden md:block hover:text-white hover:bg-pink-400 text-black text-xs font-semibold py-2 px-4 rounded-lg inline-flex items-center ">
               <AddIcon marginRight={2} mb={1} />
               <span className="mb-2">Add Services</span>
             </button>
-            <TbMessageCircle2 size={24} mr={16} />{" "}
+            <Box>
+              <TbMessageCircle2 size={24} />{" "}
+            </Box>
+
             <Box>
               <BsBell size={24} />
             </Box>

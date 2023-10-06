@@ -1,6 +1,5 @@
 "use client";
 import { Box, Flex, HStack, Text } from "@chakra-ui/react";
-import { faker } from "@faker-js/faker";
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -54,11 +53,18 @@ export const data = {
     {
       fill: true,
       label: "Data",
-      data: labels.map(() => faker.number.int({ min: 25.0, max: 1000 })),
+      // data: labels.map(() => faker.number.int({ min: 25.0, max: 1000 })),
+      data: [50.0, 38.0, 36.0, 45, 42],
       borderColor: "rgb(237, 30, 121)",
       backgroundColor: "rgb(245, 142, 187)",
+      // borderWidth: 1,
     },
   ],
+  scales: {
+    y: {
+      beginAtZero: false,
+    },
+  },
 };
 
 export default function ApexChart() {
@@ -95,7 +101,7 @@ export default function ApexChart() {
           </HStack>
         </Flex>
         <Line options={options} data={data} />
-        <Flex justifyContent={"center"}>
+        <Flex justifyContent={"center"} my={8}>
           <button className="border flex   border-pink-500   hover:text-white hover:bg-pink-400 text-pink-500 text-xs  font-bold py-2 px-4 rounded-lg inline-flex items-center h-8">
             <span>See More Statistics</span>
           </button>
