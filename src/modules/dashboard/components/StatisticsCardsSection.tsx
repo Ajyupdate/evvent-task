@@ -21,14 +21,10 @@ export default function StatisticsCardComponents({
   return (
     <Box>
       <Grid
-        templateColumns={{
-          base: "repeat(1, 1fr)",
-          md: "repeat(3, 1fr)",
-          lg: `repeat(${statDetails.length ?? 4}, 1fr)`,
-        }}
+        templateColumns={{ base: "100%", md: "33% 33% 33% " }}
         mt={"4"}
         gap={"4"}
-        flexWrap={"wrap"}
+        flexWrap={"nowrap"}
         alignItems={"center"}
       >
         {statDetails.map((item) => {
@@ -47,7 +43,12 @@ export default function StatisticsCardComponents({
                     <FaGreaterThan />
                   </Box>
                 </Flex>
-                <Flex justifyContent={"space-between"} mt={8}>
+                <Flex
+                  wrap={"nowrap"}
+                  flexDirection={{ md: "row", base: "column" }}
+                  justifyContent={"space-between"}
+                  mt={8}
+                >
                   <Box>
                     <Box
                       as="span"
@@ -61,20 +62,6 @@ export default function StatisticsCardComponents({
 
                       <Box as="span" fontSize={"x-large"} fontWeight={"bold"}>
                         {item.title !== "Total Income" ? " services" : " NOK"}
-                      </Box>
-                    </Box>
-                    <Box>
-                      <Box as="span">Last Month </Box>
-                      {"  "}
-                      <Box
-                        ml={2}
-                        as="span"
-                        fontWeight={"bold"}
-                        color={item.title === "Total Income" ? "green.600" : ""}
-                      >
-                        {item.LastMonthValue}
-                        {"   "}
-                        {item.title === "Total Income" ? "NOK" : ""}
                       </Box>
                     </Box>
                   </Box>
@@ -103,6 +90,20 @@ export default function StatisticsCardComponents({
                     </button>
                   </Box>
                 </Flex>
+                <Box>
+                  <Box as="span">Last Month </Box>
+                  {"  "}
+                  <Box
+                    ml={1}
+                    as="span"
+                    fontWeight={"bold"}
+                    color={item.title === "Total Income" ? "green.600" : ""}
+                  >
+                    {item.LastMonthValue}
+                    {"   "}
+                    {item.title === "Total Income" ? "NOK" : ""}
+                  </Box>
+                </Box>
               </Card>
             </GridItem>
           );
